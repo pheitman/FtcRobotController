@@ -3,6 +3,7 @@ package org.firstinspires.ftc.teamcode.minigame;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
+import org.firstinspires.ftc.teamcode.hardware.MinigameDriveTrain;
 import org.firstinspires.ftc.teamcode.hardware.MinigameGamepad;
 import org.firstinspires.ftc.teamcode.hardware.MinigameMotor;
 import org.firstinspires.ftc.teamcode.hardware.MinigameServo;
@@ -71,7 +72,7 @@ public class MinigameAutonomous extends LinearOpMode implements OpModeIsActive {
         telemetry.addData( "Initializing hardware", sideColor );
         telemetry.update();
 
-        MinigameIRSensor.MinigameDriveTrain driveTrain = new MinigameIRSensor.MinigameDriveTrain( hardwareMap, "m0", "m1", true );
+        MinigameDriveTrain driveTrain = new MinigameDriveTrain( hardwareMap, "m0", "m1", true );
         MinigameMotor scoop = new MinigameMotor( hardwareMap, "m3", false );
         MinigameColorSensor colorSensor = new MinigameColorSensor( hardwareMap, "i0" );
         MinigameIRSensor irSensor = new MinigameIRSensor( hardwareMap, "i1" );
@@ -122,6 +123,9 @@ public class MinigameAutonomous extends LinearOpMode implements OpModeIsActive {
             rightDriveSpeed *= DRIVE_FUDGE_FACTOR;
         }
 
+        double leftDistance = DISTANCE_ACROSS_FIELD;
+        double rightDistance = DISTANCE_ACROSS_FIELD;
+
         while( opModeIsActive() ) {
 
             telemetry.addData( "State", state );
@@ -137,9 +141,6 @@ public class MinigameAutonomous extends LinearOpMode implements OpModeIsActive {
                     break;
 
                 case StartMoving:
-
-                    double leftDistance = DISTANCE_ACROSS_FIELD;
-                    double rightDistance = DISTANCE_ACROSS_FIELD;
 
                     if( sideColor == StripColor.Blue ) {
                         rightDistance *= DRIVE_FUDGE_FACTOR;

@@ -2,9 +2,8 @@ package org.firstinspires.ftc.teamcode.minigame;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-
+import org.firstinspires.ftc.teamcode.hardware.MinigameDriveTrain;
 import org.firstinspires.ftc.teamcode.hardware.MinigameGamepad;
-import org.firstinspires.ftc.teamcode.hardware.MinigameIRSensor;
 import org.firstinspires.ftc.teamcode.hardware.MinigameMotor;
 import org.firstinspires.ftc.teamcode.hardware.MinigameServo;
 import org.firstinspires.ftc.teamcode.hardware.OpModeIsActive;
@@ -56,7 +55,7 @@ public class MinigameTeleOp extends LinearOpMode implements OpModeIsActive {
 
     public void runOpMode() {
 
-        MinigameIRSensor.MinigameDriveTrain driveTrain = new MinigameIRSensor.MinigameDriveTrain( hardwareMap, "m0", "m1", false );
+        MinigameDriveTrain driveTrain = new MinigameDriveTrain( hardwareMap, "m0", "m1", false );
         MinigameMotor scoop = new MinigameMotor( hardwareMap, "m3", true );
         MinigameServo block = new MinigameServo( hardwareMap, "s0" );
         MinigameServo basket = new MinigameServo( hardwareMap, "s1" );
