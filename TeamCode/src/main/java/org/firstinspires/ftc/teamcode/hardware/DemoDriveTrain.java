@@ -23,21 +23,21 @@ public class DemoDriveTrain {
 
     public DemoDriveTrain(HardwareMap hardwareMap, boolean useEncoders ) {
 
-        LF = hardwareMap.dcMotor.get("LF");
+        LF = hardwareMap.dcMotor.get("cm3");
         LF.setPower(0);
         LF.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         LF.setDirection(DcMotor.Direction.REVERSE);
         
-        LR = hardwareMap.dcMotor.get("LR");
+        LR = hardwareMap.dcMotor.get("cm2");
         LR.setPower(0);
         LR.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         LR.setDirection(DcMotor.Direction.REVERSE);
 
-        RF = hardwareMap.dcMotor.get("RF");
+        RF = hardwareMap.dcMotor.get("cm0");
         RF.setPower(0);
         RF.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         
-        RR = hardwareMap.dcMotor.get("RR");
+        RR = hardwareMap.dcMotor.get("cm1");
         RR.setPower(0);
         RR.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
