@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode.minigame;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import org.firstinspires.ftc.teamcode.hardware.MinigameDriveTrain;
@@ -27,6 +28,7 @@ import org.firstinspires.ftc.teamcode.hardware.OpModeIsActive;
  * I2C     Port 3                                  i3
  */
 @TeleOp(name = "MinigameTeleOp", group="Minigame")
+@Disabled
 public class MinigameTeleOp extends LinearOpMode implements OpModeIsActive {
 
     enum DriveType {

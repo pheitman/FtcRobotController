@@ -29,6 +29,7 @@
 
 package org.firstinspires.ftc.teamcode.sample;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 
@@ -44,6 +45,7 @@ import org.firstinspires.ftc.teamcode.hardware.OpModeIsActive;
  */
 
 @Autonomous(name="SampleAutonomous", group="Sample")
+@Disabled
 public class SampleAutonomous extends LinearOpMode implements OpModeIsActive {
 
     static final double DRIVE_SPEED = 0.6;

@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.pedroPathing;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
 import org.firstinspires.ftc.teamcode.hardware.DemoDriveTrain;
@@ -29,6 +30,7 @@ import org.firstinspires.ftc.teamcode.hardware.OpModeIsActive;
  */
 
 @Autonomous(name = "PedroPathingAutonomous", group="Demo")
+@Disabled
 public class PedroPathingAutonomous extends LinearOpMode implements OpModeIsActive {
 
     enum State { WaitingForStart, StartMoving, LookingForColor, LookingForIRSensor, StartDroppingCube, FinishedDroppingCube, MovingToEnd, Turning, MovingToFinalPosition, Stopped }

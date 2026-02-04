@@ -29,6 +29,7 @@
 
 package org.firstinspires.ftc.teamcode.sample;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
@@ -43,6 +44,7 @@ import org.firstinspires.ftc.teamcode.hardware.SampleTouchSensor;
  */
 
 @TeleOp(name="SampleTeleOp", group="Sample")
+@Disabled
 public class SampleTeleOp extends LinearOpMode {
 
     @Override

@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode.example;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.util.ElapsedTime;
@@ -9,6 +10,7 @@ import org.firstinspires.ftc.teamcode.hardware.ExampleServo;
 import org.firstinspires.ftc.teamcode.hardware.OpModeIsActive;
 
 @Autonomous(name = "ExampleAutonomous", group="Example")
+@Disabled
 public class ExampleAutonomous extends LinearOpMode implements OpModeIsActive {
 
     static final double CLAW_OPEN = 0.714;

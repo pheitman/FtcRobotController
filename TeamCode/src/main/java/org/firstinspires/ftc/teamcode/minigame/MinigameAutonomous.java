@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.minigame;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
 import org.firstinspires.ftc.teamcode.hardware.MinigameDriveTrain;
@@ -31,6 +32,7 @@ import org.firstinspires.ftc.teamcode.hardware.OpModeIsActive;
  */
 
 @Autonomous(name = "MinigameAutonomous", group="Minigame")
+@Disabled
 public class MinigameAutonomous extends LinearOpMode implements OpModeIsActive {
 
     enum State { WaitingForStart, StartMoving, LookingForColor, LookingForIRSensor, StartDroppingCube, FinishedDroppingCube, MovingToEnd, Turning, MovingToFinalPosition, Stopped }

@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode.example;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
@@ -7,6 +8,7 @@ import org.firstinspires.ftc.teamcode.hardware.ExampleDriveTrain;
 import org.firstinspires.ftc.teamcode.hardware.ExampleServo;
 
 @TeleOp(name = "ExampleTeleOp", group="Example")
+@Disabled
 public class ExampleTeleOp extends LinearOpMode {
 
     static final double CLAW_OPEN = 0.714;
